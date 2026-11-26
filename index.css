@@ -1,37 +1,79 @@
-
 /* 1. Reset & Box Sizing */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+/* Hero Section */
 .hero {
-  position: relative;
-  min-height: 80vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: #fff;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url("hero-desktop.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 2rem;
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+    color: #fff;
+    background:
+        linear-gradient(100deg, rgba(240, 123, 102, .85), rgba(122, 104, 160, .8)),
+        /* colour overlay */
+        url("/src/img/h.avif") center/cover;
+    /* your photo */
 }
 
-@media (max-width: 768px) {
-  .hero {
-    min-height: 65vh;
-    background-image:
-      linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-      url("hero-mobile.jpg");
-    background-position: center top;
-  }
+.sun {
+    position: absolute;
+    right: 20%;
+    bottom: 22%;
+    width: 165px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #f7ad98;
+}
 
-  .hero h1 {
-    font-size: 1.75rem;
-  }
+.mtn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+}
+
+.mtn-back {
+    height: 48%;
+}
+
+/* taller, so it peeks out behind */
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+/* keeps text above the mountains */
+
+.scroll {
+    position: absolute;
+    right: 60px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.scroll i {
+    width: 1px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* style for navbar */
+.nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background: #2b20334d;
 }

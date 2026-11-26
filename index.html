@@ -2,31 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-<<<<<<< HEAD
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>think-and-go</title>
   </head>
+
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-=======
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"
-    />
-    <link rel="stylesheet" href="index.css" />
-    <title>think and go</title>
-  </head>
-  <body>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Welcome</h1>
-        <p>Build faster across desktop and mobile.</p>
-        <a href="#start" class="btn">Get Started</a>
+
+    <div class="nav">
+      <h4>Think & Go</h4>
+      <h5>Packages</h5>
+      <h5>About</h5>
+      <h5>FAQ</h5>
+      <div class="nav-btn">WhatsApp us</div>
+    </div>
+
+
+    <div class="hero">
+      <div class="sun"></div>
+
+      <!-- light, see-through mountains -->
+      <svg
+        class="mtn mtn-back"
+        viewBox="0 0 1440 400"
+        preserveAspectRatio="none"
+      >
+        <polygon
+          fill="rgba(120,100,150,.45)"
+          points="0,300 200,150 420,330 700,120 980,320 1200,160 1440,300 1440,400 0,400"
+        />
+      </svg>
+
+      <!-- dark, solid mountains -->
+      <svg
+        class="mtn mtn-front"
+        viewBox="0 0 1440 400"
+        preserveAspectRatiSo="none"
+      >
+        <polygon
+          fill="#46405a"
+          points="0,400 0,340 260,230 520,360 820,180 1060,330 1250,210 1440,330 1440,400"
+        />
+      </svg>
+
+      <div class="content">
+        <!-- your headline, text and buttons -->
       </div>
-    </section>
->>>>>>> b11040a (added hero sec)
+
+      <div class="scroll"><span>Scroll to travel</span><i></i></div>
+    </div>
   </body>
 </html>
