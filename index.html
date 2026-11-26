@@ -5,53 +5,72 @@
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+    <link rel="stylesheet" href="style.css" />
     <title>think-and-go</title>
   </head>
 
   <body>
-
-    <div class="nav">
-      <h4>Think & Go</h4>
-      <h5>Packages</h5>
-      <h5>About</h5>
-      <h5>FAQ</h5>
-      <div class="nav-btn">WhatsApp us</div>
-    </div>
-
-
-    <div class="hero">
-      <div class="sun"></div>
-
-      <!-- light, see-through mountains -->
-      <svg
-        class="mtn mtn-back"
-        viewBox="0 0 1440 400"
-        preserveAspectRatio="none"
-      >
-        <polygon
-          fill="rgba(120,100,150,.45)"
-          points="0,300 200,150 420,330 700,120 980,320 1200,160 1440,300 1440,400 0,400"
-        />
-      </svg>
-
-      <!-- dark, solid mountains -->
-      <svg
-        class="mtn mtn-front"
-        viewBox="0 0 1440 400"
-        preserveAspectRatiSo="none"
-      >
-        <polygon
-          fill="#46405a"
-          points="0,400 0,340 260,230 520,360 820,180 1060,330 1250,210 1440,330 1440,400"
-        />
-      </svg>
-
-      <div class="content">
-        <!-- your headline, text and buttons -->
+    <header class="hero">
+      <div class="nav">
+        <h4>Think & Go</h4>
+        <h5>Packages</h5>
+        <h5>About</h5>
+        <h5>FAQ</h5>
+        <div class="nav-btn">
+          <a href="https://wa.me/yourNumber">
+            WhatsApp us <span class="arrow">&#8594;</span>
+          </a>
+        </div>
       </div>
 
-      <div class="scroll"><span>Scroll to travel</span><i></i></div>
-    </div>
+      <div class="sun"></div>
+
+      <!-- BACK LAYER: brown hill + see-through light mountains -->
+      <svg
+        class="mtn mtn-back"
+        viewBox="0 0 1892 300"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <defs>
+          <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#d08a6c" />
+            <stop offset="1" stop-color="#6a5a5a" />
+          </linearGradient>
+        </defs>
+        <!-- warm brown hill left of the sun -->
+        <!-- <polygon fill="url(#hill)" opacity=".85"
+      points="430,175 560,105 650,62 720,62 800,105 920,160 920,300 430,300"/> -->
+        <!-- light see-through mountains -->
+        <polygon
+          fill="rgba(165,145,190,.42)"
+          points="0,30 150,125 330,95 560,160 800,100 1030,92 1250,150 1365,40 1560,130 1740,20 1892,90 1892,300 0,300"
+        />
+      </svg>
+
+      <!-- FRONT LAYER: dark solid mountains -->
+      <svg
+        class="mtn mtn-front"
+        viewBox="0 0 1892 300"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <polygon
+          fill="#463d58"
+          points="0,170 415,94 660,165 905,117 1093,190 1365,78 1530,148 1740,56 1892,140 1892,300 0,300"
+        />
+      </svg>
+
+      <div class="content"><!-- navbar, headline, text, buttons --></div>
+      <div class="scroll"><span>Scroll to wander</span><i></i></div>
+    </header>
   </body>
 </html>

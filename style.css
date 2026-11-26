@@ -1,0 +1,164 @@
+/* ===== RESET: now includes the real elements, not just ::before/::after ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+  --serif:"Instrument Serif", Georgia, serif;
+  --sans:"DM Sans", system-ui, sans-serif;
+}
+
+body{ font-family:var(--sans); }
+
+/* =====  no default margin, no forced size ===== */
+html,
+body {
+    margin: 0;
+
+}
+
+body {
+    min-height: 100vh;
+    /* was width:100vw; height:100vh, which caused the overflow */
+}
+
+/* ===== HERO: sky background (layers listed top to bottom) ===== */
+.hero {
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+    color: #fff;
+    background:
+        /* 1. teal-blue sky across the top, fading out by 45% height */
+        linear-gradient(180deg, rgba(70, 130, 175, .90) 0%, rgba(95, 145, 185, .50) 18%, transparent 45%),
+
+        /* 2. coral glow coming in from the LEFT edge, centered at 55% height */
+        radial-gradient(ellipse 65% 85% at 10% 65%, #e97b68 0%, rgba(230, 120, 101, 0.7) 45%, transparent 100%),
+
+        /* 3. purple wash on the RIGHT edge, centered at 40% height */
+        radial-gradient(ellipse 60% 75% at 100% 40%, #8f78b0 0%, rgba(143, 120, 176, .80) 45%, transparent 100%),
+
+        /* 4. soft warm halo around the sun */
+        radial-gradient(circle at 62% 67%, rgba(247, 200, 152, .45) 0%, transparent 28%),
+
+        /* 5. your photo */
+        url("/src/img/h.avif") center/cover;
+}
+
+/* ===== SUN ===== */
+.sun {
+    position: absolute;
+    right: 32%;
+    /* 606px of 1892px from the right edge */
+    bottom: 18.5%;
+    /* bottom of the sun is 148px of 802px up */
+    width: 12vw;
+    /* 225px at 1892px wide */
+    max-width: 260px;
+    min-width: 90px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #f7c898;
+    box-shadow: 0 0 90px 30px rgba(247, 200, 152, .35);
+    /* glow */
+}
+
+/* ===== MOUNTAINS ===== */
+.mtn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 37.5%;
+    /* 300px of 802px: where the peaks start */
+    display: block;
+}
+
+.mtn-back {
+    z-index: 1;
+}
+
+/* above the sun, so its lower half looks tinted */
+.mtn-front {
+    z-index: 2;
+}
+
+/* dark layer in front of everything */
+
+/* ===== CONTENT stays above the mountains ===== */
+.content {
+    position: relative;
+    z-index: 3;
+}
+
+/* ===== "SCROLL TO WANDER" ===== */
+.scroll {
+    position: absolute;
+    z-index: 3;
+    right: 190px;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .7);
+}
+
+.scroll i {
+    width: 1px;
+    height: 48px;
+    background: rgba(255, 255, 255, .6);
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    height: 3.5rem;
+    margin-top: 1rem;
+    margin-left: 11.5rem;
+    padding: 0 1rem;
+       background: rgba(43, 32, 51, 0.3);
+    /* a very light tint */
+    border-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: .5rem;
+}
+
+
+.nav-btn {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+  /* gap: 0.5rem; */
+  padding: 0.5rem 1rem;   /* smaller = closer to the red area */
+  /* margin-right: 5rem; */
+  margin-top: 0.5rem;
+  border-radius: 0.75rem;
+  background: #fff;
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  height: 2.5rem;
+}
+
+a {
+color: #000;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 10px;
+}
